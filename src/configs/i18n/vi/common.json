@@ -1,0 +1,7 @@
+{
+  "TOKEN_INVALID": "Token không hợp lệ",
+  "REQUIRED_FIELD": "Bạn phải điền thông tin này",
+  "TOKEN_INVALID_TTL": "Token TTL không hợp lệ",
+  "FORBIDDEN_RESOURCE": "Forbidden resource",
+  "SUCCESS": "Thành công"
+}

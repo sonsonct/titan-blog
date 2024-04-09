@@ -1,0 +1,13 @@
+stages:
+  - deploy_develop
+
+deploy_develop:
+  stage: deploy_develop
+  only:
+    - develop
+  tags:
+    - titan-blog-dev
+  script:
+    - rsync -azh --exclude={.git,.github,.env,dist,node_modules} --delete ./ /opt/titan-blog/api
+    - cd /opt/titan-blog/api
+    - docker compose up -d --build

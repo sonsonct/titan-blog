@@ -1,0 +1,35 @@
+version: '3.5'
+
+services:
+  titan-blog-backend:
+    build: .
+    container_name: titan-blog-backend
+    ports:
+      - 0.0.0.0:7000:3000
+    environment:
+      - NODE_TLS_REJECT_UNAUTHORIZED=0
+    networks:
+      - titan-blog-network
+
+  db:
+    image: mysql:8.0.27
+    container_name: titan-blog-db
+    ports:
+      - 3302:3306
+    volumes:
+      - blog-db:/var/lib/mysql
+    command: --max_allowed_packet=67108864 --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+    environment:
+      - MYSQL_ROOT_PASSWORD=titanblog@2024*
+      - MYSQL_DATABASE=app
+      - MYSQL_USER=titan-blog
+      - MYSQL_PASSWORD=titanblog@2024*
+    networks:
+      - titan-blog-network
+
+volumes:
+  blog-db:
+
+networks:
+  titan-blog-network:
+    driver: bridge

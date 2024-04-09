@@ -1,0 +1,32 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "assets": [
+      {
+        "include": "templates/**/*.ejs",
+        "watchAssets": true
+      },
+      {
+        "include": "configs/**/*.yaml",
+        "watchAssets": true
+      },
+      {
+        "include": "configs/**/*.json",
+        "watchAssets": true
+      },
+      {
+        "include": "grpc/**/*.proto",
+        "watchAssets": true
+      },
+      {
+        "include": "public/**/*{.js,.css,.html}",
+        "watchAssets": true
+      },
+      {
+        "include": "assets",
+        "watchAssets": true
+      }
+    ]
+  }
+}

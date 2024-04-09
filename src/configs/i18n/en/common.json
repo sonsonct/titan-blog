@@ -1,0 +1,10 @@
+{
+  "TOKEN_INVALID": "Token is invalid",
+  "TOKEN_EXPIRED": "Token is expired",
+  "REQUIRED_FIELD": "This field is required",
+  "TOKEN_INVALID_TTL": "Token is invalid TTL",
+  "FORBIDDEN_RESOURCE": "Forbidden resource",
+  "OTP_INVALID": "OTP is invalid",
+  "NOT_FOUND": "Record not found",
+  "SUCCESS": "Success"
+}
